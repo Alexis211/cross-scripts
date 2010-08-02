@@ -1,4 +1,4 @@
-These scripts create a cross-compiler toolchain in your $HOME/usr directory.
+These scripts create a cross-compiler toolchain in your `$HOME/usr` directory.
 This kind of cross-compiler is mostly useful for basic Operating System developpment.
 
 Included packages
@@ -21,10 +21,9 @@ Setting up the cross-compiler
 -----------------------------
 
 - Create a directory named `usr` in your home directory.
-- Add the following line to your .bashrc :
-  	export PATH=$PATH:$HOME/usr/bin
-- Run cross-<arch>.sh for the architecture you target
+- Add the following line to your `.bashrc` : `export PATH=$PATH:$HOME/usr/bin`
+- Run `cross-<arch>.sh` for the architecture you target
   Go on the internet and read some useless stuff, this step is long.
 
-The compiler is available as *-gcc and *-g++, where * is one of the prefixes listed above (ex: i586-elf-gcc).
+The compiler is available as `*-gcc` and `*-g++`, where * is one of the prefixes listed above (ex: i586-elf-gcc).
 
