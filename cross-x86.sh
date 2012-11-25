@@ -1,7 +1,7 @@
 #!/bin/sh
 
-GCC=4.5.0
-BINUTILS=2.20
+GCC=4.6.3
+BINUTILS=2.22
 ARCH=x86
 
 cd `dirname $0`
