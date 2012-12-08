@@ -1,7 +1,7 @@
 #!/bin/sh
 
-GCC=4.6.3
-BINUTILS=2.22
+GCC=4.7.2
+BINUTILS=2.23.1
 ARCH=x86
 
 cd `dirname $0`
@@ -11,16 +11,14 @@ export PREFIX=$HOME/usr
 export TARGET=i586-elf
 
 echo " ==> FETCHING CROSS COMPILER ARCHIVES <=="
-if [ ! -f gcc-core-$GCC.tar.bz2 ]; then wget http://ftp.gnu.org/gnu/gcc/gcc-$GCC/gcc-core-$GCC.tar.bz2; fi
-if [ ! -f gcc-g++-$GCC.tar.bz2 ]; then wget http://ftp.gnu.org/gnu/gcc/gcc-$GCC/gcc-g++-$GCC.tar.bz2; fi
+if [ ! -f gcc-$GCC.tar.bz2 ]; then wget http://ftp.gnu.org/gnu/gcc/gcc-$GCC/gcc-$GCC.tar.bz2; fi
 if [ ! -f binutils-$BINUTILS.tar.bz2 ]; then wget http://ftp.gnu.org/gnu/binutils/binutils-$BINUTILS.tar.bz2; fi
 
 mkdir build-$ARCH
 cd build-$ARCH
 
 echo " ==> EXTRACTING ARCHIVES <=="
-tar xjf ../gcc-core-$GCC.tar.bz2
-tar xjf ../gcc-g++-$GCC.tar.bz2
+tar xjf ../gcc-$GCC.tar.bz2
 tar xjf ../binutils-$BINUTILS.tar.bz2
 
 mkdir build-binutils-$BINUTILS
